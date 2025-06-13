@@ -19,11 +19,11 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div>
+    <div className=" w-full">
       <div className="w-full bg-[#1D2026] p-6">
-        <div className=" flex justify-between items-center w-full">
+        <div className=" flex md:justify-between justify-end items-center w-full">
           {/* Left: Navigation Links */}
-          <ul className="flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-8">
             {tabs.map((tab) => {
               const isActive = location.pathname === tab.path;
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <div>
                     <img src={logo} className="w-[120px] "/>
                 </div>
-                <div className="flex items-center gap-3 ">
+                <div className="hidden md:flex items-center gap-3 ">
                     <div className="flex items-center gap-5 justify-center">
                         <img src={Bell}/>
                         <img src={Heart}/>
