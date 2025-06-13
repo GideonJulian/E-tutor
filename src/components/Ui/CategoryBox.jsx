@@ -5,7 +5,7 @@ const CategoryBox = ({ courseAmount, courseName, background, icon, hasShadow }) 
     <div
       className={`w-full max-w-[300px] ${
         hasShadow ? "shadow-lg" : ""
-      } flex flex-col items-center text-center gap-3 p-5 rounded-md mx-auto`}
+      } flex flex-col md:flex-row items-center text-center md:text-left gap-3 md:gap-5 p-5 rounded-md mx-auto`}
       style={{ background }}
     >
       <img src={icon} className="w-12 h-12 object-contain" />
