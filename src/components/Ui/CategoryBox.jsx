@@ -3,8 +3,8 @@ import React from "react";
 const CategoryBox = ({ courseAmount, courseName, background, icon, hasShadow }) => {
   return (
     <div
-      className={`w-full max-w-[300px] ${
-        hasShadow ? "shadow-lg" : ""
+      className={`w-full max-w-[310px] ${
+        hasShadow ? "shadow-md" : ""
       } flex flex-col md:flex-row items-center text-center md:text-left gap-3 md:gap-5 p-5 rounded-md mx-auto`}
       style={{ background }}
     >

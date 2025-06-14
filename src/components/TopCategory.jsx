@@ -85,7 +85,7 @@ const TopCategory = () => {
   <h1 className="text-4xl text-center text-[#1D2026] font-[600]">
     Browse top category
   </h1>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4  mt-7">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[1290px] m-auto mt-7">
     {TopCategoryData.map((item, index) => (
       <CategoryBox
         key={index}
