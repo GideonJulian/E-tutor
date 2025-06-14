@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* Left: Navigation Links */}
           <ul className="hidden md:flex items-center gap-8">
             {tabs.map((tab) => {
-              const isActive = location.pathname === tab.path;
+           const isActive = location.pathname === tab.path;
 
               return (
                 <li key={tab.name}>
