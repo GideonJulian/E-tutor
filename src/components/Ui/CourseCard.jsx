@@ -3,8 +3,8 @@ import course1 from "../../assets/images/course1.png";
 import star from "../../assets/icons/star.png";
 const CourseCard = ({studentNumber, rate, courseName, price, category, img, bgColor, textColor}) => {
   return (
-    <div className="w-[290px]  overflow-hidden font-sans mt-3">
-      <div className="bg-white w-[290px]">
+  <div className="w-full max-w-[290px] overflow-hidden font-sans mt-3">
+      <div className="bg-white w-full  max-w-[290px]">
         <img src={img} className="w-full h-[180px] object-cover " />
         <div className="desc p-4">
           <div className="flex items-center justify-between">
