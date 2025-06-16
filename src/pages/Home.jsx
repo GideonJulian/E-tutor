@@ -1,7 +1,8 @@
-import React from 'react'
-import Hero from '../components/Ui/Hero'
-import TopCategory from '../components/TopCategory'
-import BestSelling from '../components/BestSelling'
+import React from "react";
+import Hero from "../components/Ui/Hero";
+import TopCategory from "../components/TopCategory";
+import BestSelling from "../components/BestSelling";
+import OverlayCard from "../components/Ui/OverlayCard";
 
 const Home = () => {
   return (
@@ -12,11 +13,12 @@ const Home = () => {
       <div>
         <TopCategory />
       </div>
-      <div className='bg-[#F0F2F5] w-full'>
+      <div className="bg-[#F0F2F5] w-full">
         <BestSelling />
       </div>
+  
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
