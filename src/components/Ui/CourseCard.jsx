@@ -1,6 +1,6 @@
 import React from "react";
 import course1 from "../../assets/images/course1.png";
-import star from "../../assets/icons/star.png";
+import star from "../../assets/icons/Star.png";
 const CourseCard = ({studentNumber, rate, courseName, price, category, img, bgColor, textColor}) => {
   return (
   <div className="w-full max-w-[290px] overflow-hidden font-sans mt-3">
