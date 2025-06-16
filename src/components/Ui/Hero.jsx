@@ -6,8 +6,8 @@ const Hero = () => {
     <div className="w-full bg-[#F0F2F5]">
       <div className=" md:ml-[130px] flex flex-col md:flex-row items-center justify-between gap-10 p-4 md:p-0">
         {/* Left Text Content */}
-        <div className="max-w-[548px]">
-          <h1 className="text-[#1D2026] text-4xl md:text-5xl font-semibold leading-tight">
+        <div className="max-w-[548px] ">
+          <h1 className="text-[#1D2026] text-4xl md:text-5xl  font-semibold leading-tight">
             Learn with expert anytime anywhere
           </h1>
           <p className="mt-6 text-lg text-[#333] max-w-[450px]">

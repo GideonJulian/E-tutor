@@ -85,18 +85,19 @@ const TopCategory = () => {
   <h1 className="text-4xl text-center text-[#1D2026] font-[600]">
     Browse top category
   </h1>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[1290px] m-auto mt-7">
-    {TopCategoryData.map((item, index) => (
-      <CategoryBox
-        key={index}
-        background={item.background}
-        courseAmount={item.courseAmount}
-        icon={item.icon}
-        courseName={item.name}
-        hasShadow={item.hasShadow}
-      />
-    ))}
-  </div>
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1290px] mx-auto mt-7 px-4">
+  {TopCategoryData.map((item, index) => (
+    <CategoryBox
+      key={index}
+      background={item.background}
+      courseAmount={item.courseAmount}
+      icon={item.icon}
+      courseName={item.name}
+      hasShadow={item.hasShadow}
+    />
+  ))}
+</div>
+
 </div>
 
   );
