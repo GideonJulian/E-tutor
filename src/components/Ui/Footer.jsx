@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="w-full bg-[#1D2026] p-4 md:pt-20 pt-10">
       <div className="max-w-[1200px] mx-auto  md:flex-row flex-col flex items-center justify-between">
         <div>
-          <h1 className="text-[#FFFFFF] text-2xl md:text-3xl font-[600] md:w-[450px]">
+          <h1 className="text-[#FFFFFF] text-lg md:text-3xl font-[600] md:w-[450px]">
             Start learning with 67.1k students around the world.
           </h1>
           <div className="flex items-center gap-5 mt-4 ">

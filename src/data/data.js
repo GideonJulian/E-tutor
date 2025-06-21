@@ -90,21 +90,22 @@ const SellingCourse = [
     bgcolor: '#E1F7E3',
     textColor: '#15711F'
   },
-  //   {
-  //     courseName: "",
-  //     category: "",
-  //     price: "57",
-  //     rate: "5.0",
-  //     studentNumber: "265.7K",
-  //     img: "",
-  //   },{
-  //     courseName: "",
-  //     category: "",
-  //     price: "57",
-  //     rate: "5.0",
-  //     studentNumber: "265.7K",
-  //     img: "",
-  //   },
-];
 
-export { SellingCourse };
+];
+const FeatureCourses = [
+  {
+
+    courseName: "The Complete Digital Marketing Course - 12 Courses in 1",
+    category: "Marketing",
+    price: "57",
+    rate: "5.0",
+    studentNumber: "265.7K",
+    img: course7,
+    bgcolor: '#EBEBFF',
+    textColor: '#342F98',
+    teachName: 'Kevin Gilbert'
+
+  }
+]
+
+export { SellingCourse , FeatureCourses};
