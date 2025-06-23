@@ -1,55 +1,81 @@
 import React from "react";
-import course7 from '../../assets/images/course7.png'
+import course7 from "../../assets/images/course7.png";
 import star from "../../assets/icons/Star.png";
 import clock from "../../assets/icons/Clock.png";
 import User from "../../assets/icons/User.png";
 import bars from "../../assets/icons/bar-chart.png";
-const FeaturesCourseCard = ({img,textColor,courseName, bgColor,nameColor,category}) => {
+const FeaturesCourseCard = ({
+  img,
+  textColor,
+  courseName,
+  bgColor,
+  nameColor,
+  category,
+}) => {
   return (
-    <div>
-     
+    <div className="">
       <div className="mt-5">
-        <div className="flex  items-center border border-[#E9EAF0] w-[650px]">
-          <div>
-            <img src={img} className="h-[180px] object-cover" />
+        <div className="flex flex-col lg:flex-row items-center border border-[#E9EAF0] w-full max-w-[650px] mx-auto rounded-md overflow-hidden shadow-sm bg-white">
+          {/* Image */}
+          <div className="w-full h-[200px] lg:w-[200px] lg:h-[180px] flex-shrink-0">
+            <img
+              src={img}
+              className="w-full h-full object-cover"
+              alt="course"
+            />
           </div>
-          <div className=" w-full p-3">
-            <div className="flex items-center justify-between pb-4">
-              <div className="px-3 py-1 bg-[]" style={{backgroundColor: bgColor}}>
-                <h1 className="" style={{ color: textColor}}>{category}</h1>
+
+          {/* Text Content */}
+          <div className="w-full p-4">
+            {/* Category and Price */}
+            <div className="flex items-center justify-between pb-3 flex-wrap gap-2">
+              <div
+                className="px-3 py-1 rounded text-sm font-semibold"
+                style={{ backgroundColor: bgColor, color: textColor }}
+              >
+                {category}
               </div>
-              <div>
-                <h1 className="text-lg">$14.00</h1>
-              </div>
+              <div className="text-lg font-semibold text-gray-800">$14.00</div>
             </div>
-            <h1 className="font-bold" style={{color: nameColor}}>
+
+            {/* Course Title */}
+            <h1
+              className="font-bold text-lg lg:text-xl mb-2"
+              style={{ color: nameColor }}
+            >
               {courseName}
             </h1>
-            <div className="mt-3 flex justify-between items-center">
-              <h1 className="text-[#4E5566] ">Kevin Gilbert</h1>
-              <div className="flex items-center">
-                <img src={star} className="w-6 h-6" alt="" />
-                <h1 className="text-[#4E5566] font-bold text-lg">
+
+            {/* Author and Rating */}
+            <div className="flex justify-between items-center flex-wrap gap-2 mb-3">
+              <span className="text-[#4E5566] text-sm lg:text-base">
+                Kevin Gilbert
+              </span>
+              <div className="flex items-center gap-1">
+                <img src={star} className="w-5 h-5" alt="star" />
+                <span className="text-[#4E5566] font-bold text-sm lg:text-base">
                   5.0{" "}
                   <span className="text-[#8C94A3] font-normal">(357,914)</span>
-                </h1>
+                </span>
               </div>
             </div>
-            <div className="flex items-center justify-around mt-4">
+
+            {/* Stats */}
+            <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-[#4E5566]">
               <div className="flex items-center gap-2">
-                <img src={User} alt="" />
-                <h1 className="text-[#4E5566] font-bold text-lg">
-                  265.7K
+                <img src={User} alt="students" className="w-4 h-4" />
+                <span className="font-bold">
+                  265.7K{" "}
                   <span className="text-[#8C94A3] font-normal">students</span>
-                </h1>
-              </div>{" "}
+                </span>
+              </div>
               <div className="flex items-center gap-2">
-                <img src={bars} alt="" />
-                <h1 className="text-[#4E5566] font-bold text-lg">Beginners</h1>
-              </div>{" "}
+                <img src={bars} alt="level" className="w-4 h-4" />
+                <span className="font-bold">Beginners</span>
+              </div>
               <div className="flex items-center gap-2">
-                <img src={clock} alt="" />
-                <h1 className="text-[#4E5566] font-bold text-lg">6 hours</h1>
+                <img src={clock} alt="duration" className="w-4 h-4" />
+                <span className="font-bold">6 hours</span>
               </div>
             </div>
           </div>

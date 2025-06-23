@@ -20,7 +20,7 @@ const FeatureCourses = () => {
     },
     {
       courseName: "Adobe XD for Web Design: Essential Principles",
-      nameColor: '#FF6636',
+      nameColor: "#FF6636",
       category: "Productivity",
       price: 57,
       rate: 5.0,
@@ -41,7 +41,7 @@ const FeatureCourses = () => {
     },
     {
       courseName: "Investing In Stocks The Complete Course! (13 H...",
-      category: "Lifestyle",
+      category: "Health & Fitness",
       price: 57,
       rate: 5.0,
       studentNumber: "265.7K",
@@ -51,19 +51,19 @@ const FeatureCourses = () => {
     },
   ];
   return (
-    <div className="mx-auto max-w-[1390px]">
-      <div className="flex  items-center justify-between">
-        {" "}
-        <h1 className="text-2xl">Our Feature courses </h1>
-        <p className="text-[#4E5566] w-[450px]">
-          {" "}
+    <div className="mx-auto max-w-[1390px] px-4 shadow-lg">
+      {/* Header */}
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <h1 className="text-2xl font-bold">Our Feature Courses</h1>
+        <p className="text-[#4E5566] max-w-xl text-base">
           Vestibulum sed dolor sed diam mollis maximus vel nec dolor. Donec
           varius purus et eleifend porta.
         </p>
       </div>
-      <div className="shadow-md p-5 grid grid-cols-2 gap-10">
-        {data.map((items) => (
-          <FeaturesCourseCard img={items.img} category={items.category} nameColor={items.nameColor} bgColor={items.bgcolor} textColor={items.textColor} courseName={items.courseName} />
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-6">
+        {data.map((item, index) => (
+          <FeaturesCourseCard key={index} {...item} />
         ))}
       </div>
     </div>
