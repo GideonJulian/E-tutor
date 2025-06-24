@@ -4,6 +4,7 @@ import TopCategory from "../components/TopCategory";
 import BestSelling from "../components/BestSelling";
 import OverlayCard from "../components/Ui/OverlayCard";
 import FeatureCourses from "../components/FeatureCourses";
+import BecomeHost from "../components/BecomeHost";
 
 const Home = () => {
   return (
@@ -19,6 +20,9 @@ const Home = () => {
       </div>
       <div className="bg-[#fff] w-full p-4">
         <FeatureCourses />
+      </div>
+      <div className="bg-[#F0F2F5] w-full p-4" >
+      <BecomeHost />
       </div>
     </div>
   );
