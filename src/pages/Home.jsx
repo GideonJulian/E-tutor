@@ -21,9 +21,10 @@ const Home = () => {
       <div className="bg-[#fff] w-full p-6">
         <FeatureCourses />
       </div>
-      <div className="bg-[#F0F2F5] w-full p-4" >
-      <BecomeHost />
+      <div className="bg-[#F0F2F5] w-full p-6 mt-10">
+        <BecomeHost />
       </div>
+      <div className="bg-white w-full p-6 "></div>
     </div>
   );
 };
