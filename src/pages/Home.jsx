@@ -5,6 +5,7 @@ import BestSelling from "../components/BestSelling";
 import OverlayCard from "../components/Ui/OverlayCard";
 import FeatureCourses from "../components/FeatureCourses";
 import BecomeHost from "../components/BecomeHost";
+import TopTeachers from "../components/TopTeachers";
 
 const Home = () => {
   return (
@@ -24,7 +25,9 @@ const Home = () => {
       <div className="bg-[#F0F2F5] w-full p-6 mt-10">
         <BecomeHost />
       </div>
-      <div className="bg-white w-full p-6 "></div>
+      <div className="bg-white w-full p-6 ">
+        <TopTeachers />
+      </div>
     </div>
   );
 };
