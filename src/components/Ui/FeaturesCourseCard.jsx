@@ -15,7 +15,7 @@ const FeaturesCourseCard = ({
   return (
     <div className="">
       <div className="mt-5">
-        <div className="flex flex-col lg:flex-row items-center border border-[#E9EAF0] w-full max-w-[650px] mx-auto rounded-md overflow-hidden shadow-sm bg-white">
+        <div className="flex flex-col lg:flex-row items-center border border-[#E9EAF0] w-full max-w-[650px] mx-auto rounded-md overflow-hidden  bg-white">
           {/* Image */}
           <div className="w-full h-[200px] lg:w-[200px] lg:h-[180px] flex-shrink-0">
             <img

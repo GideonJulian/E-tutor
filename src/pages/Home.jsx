@@ -18,7 +18,7 @@ const Home = () => {
       <div className="bg-[#F0F2F5] w-full">
         <BestSelling />
       </div>
-      <div className="bg-[#fff] w-full p-4">
+      <div className="bg-[#fff] w-full p-6">
         <FeatureCourses />
       </div>
       <div className="bg-[#F0F2F5] w-full p-4" >
