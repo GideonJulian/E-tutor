@@ -8,11 +8,13 @@ import teach5 from "../assets/images/teach5.png";
 
 const TopTeachers = () => {
   return (
-    <div className="mx-auto">
-      <h1 className="text-center font-bold text-2xl ">
-        Top instructor of the month
+    <div className="max-w-7xl mx-auto px-4 py-10">
+      <h1 className="text-center font-bold text-2xl mb-8">
+        Top instructors of the month
       </h1>
-      <div>
+
+      {/* Grid with 5 columns on large screens */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {[
           {
             name: "Devon Lane",
@@ -50,30 +52,27 @@ const TopTeachers = () => {
             rate: 4.2,
           },
         ].map((items, index) => (
-          <div key={index} className="flex  items-center  gap-5">
-            <div>
-              <img src={items.img} alt="" />
-              <div className="desc border border-[#E9EAF0]">
-                <div className="text-center">
-                  <h1>{items.name}</h1>
-                  <p className="text-[#8C94A3]">{items.role}</p>
-                </div>
-                <div className="border-t border-gray-200 flex items-center justify-between p-4">
-                  <div className="flex items-center gap-1">
-                    <img src={star} className="w-5 h-5" alt="rating" />
-                    <h1 className="text-[#4E5566] font-bold text-sm">
-                      {items.rate}
-                    </h1>
-                  </div>
-                  <h1 className="text-sm font-bold text-[#4E5566]">
-                    {items.students}
-                    <span className="text-[#8C94A3] font-normal">
-                      {" "}
-                      students
-                    </span>
-                  </h1>
-                </div>
+          <div
+            key={index}
+            className="flex flex-col items-center text-center p-4 border border-[#E9EAF0] rounded-lg bg-white shadow-sm"
+          >
+            <img
+              src={items.img}
+              alt={items.name}
+              className="w-20 h-20 rounded-full object-cover mb-3"
+            />
+            <h1 className="font-semibold text-base">{items.name}</h1>
+            <p className="text-[#8C94A3] text-sm">{items.role}</p>
+
+            <div className="flex items-center justify-between mt-4 w-full border-t pt-3 border-gray-200 text-sm text-[#4E5566]">
+              <div className="flex items-center gap-1">
+                <img src={star} className="w-4 h-4" alt="rating" />
+                <span className="font-bold">{items.rate}</span>
               </div>
+              <span className="font-bold">
+                {items.students}
+                <span className="text-[#8C94A3] font-normal"> students</span>
+              </span>
             </div>
           </div>
         ))}
