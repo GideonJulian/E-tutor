@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import star from "../assets/icons/Star.png";
 import teach1 from "../assets/images/teach1.png";
 import teach2 from "../assets/images/teach2.png";
@@ -8,7 +8,7 @@ import teach4 from "../assets/images/teach4.png";
 import arrow from "../assets/icons/ArrowRight.png";
 import teach5 from "../assets/images/teach5.png";
 
-const TopTeachers = () => {
+const TopTeachers = ({ setShow, show }) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -71,7 +71,7 @@ const TopTeachers = () => {
           >
             <div
               key={index}
-              className="flex flex-col items-center text-center p-4 border border-[#E9EAF0] rounded-lg bg-white shadow-sm"
+              className="flex flex-col items-center text-center p-4 border border-[#E9EAF0] rounded-lg bg-white shadow-sm cursor-pointer"
             >
               <img
                 src={items.img}
@@ -95,18 +95,20 @@ const TopTeachers = () => {
           </motion.div>
         ))}
       </div>
-      <div className="mt-5 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left px-4">
-        <h1 className="text-base md:text-lg font-medium max-w-xl">
-          Thousands of students are waiting for an instructor. Start teaching &
-          earning now!
-        </h1>
-        <div>
-          <h1 className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0">
-            Start Teaching
-            <img src={arrow} alt="arrow" width={20} />
+      {show && (
+        <div className="mt-5 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left px-4">
+          <h1 className="text-base md:text-lg font-medium max-w-xl">
+            Thousands of students are waiting for an instructor. Start teaching
+            & earning now!
           </h1>
+          <div>
+            <h1 className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0">
+              Start Teaching
+              <img src={arrow} alt="arrow" width={20} />
+            </h1>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

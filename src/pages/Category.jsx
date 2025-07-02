@@ -1,7 +1,10 @@
 import React from "react";
 import BestSelling from "../components/BestSelling";
+import TopTeachers from "../components/TopTeachers";
 
 const Category = () => {
+    const [show, setShow] = useState(true);
+
   return (
     <div className="w-full mt-10">
       <div className="w-full">
@@ -48,7 +51,9 @@ const Category = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F0F2F5] p-4"></div>
+      <div className="w-full bg-[#F0F2F5] p-4">
+      <TopTeachers show={show} setShow={setShow} />;
+      </div>
     </div>
   );
 };
