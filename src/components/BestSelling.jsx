@@ -2,7 +2,8 @@ import React from "react";
 import { SellingCourse } from "../data/data";
 import CourseCard from "./Ui/CourseCard";
 import { motion } from "framer-motion";
-const BestSelling = ({title}) => {
+
+const BestSelling = ({ title, limit }) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -13,10 +14,10 @@ const BestSelling = ({title}) => {
   };
 
   return (
-    <div className=" pb-10">
+    <div className="pb-10">
       <h1 className="text-2xl text-center font-[600]">{title}</h1>
       <div className="md:max-w-[1290px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 md:mx-auto px-4">
-        {SellingCourse.map((item, index) => (
+        {SellingCourse.slice(0, limit).map((item, index) => (
           <motion.div
             key={index}
             initial="hidden"
@@ -24,7 +25,6 @@ const BestSelling = ({title}) => {
             variants={itemVariants}
             transition={{ delay: index * 0.5 }}
             viewport={{ once: true }}
-            className={`${index > 3 ? " sm:block hidden" : ""}`}
           >
             <CourseCard
               studentNumber={item.studentNumber}
