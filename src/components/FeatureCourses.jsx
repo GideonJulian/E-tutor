@@ -8,9 +8,13 @@ import course6 from "../assets/images/course6.png";
 import course7 from "../assets/images/course7.png";
 
 const FeatureCourses = () => {
-      const itemVariants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.95, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.95, ease: "easeOut" },
+    },
   };
   const data = [
     {

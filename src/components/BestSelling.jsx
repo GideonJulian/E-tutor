@@ -3,9 +3,13 @@ import { SellingCourse } from "../data/data";
 import CourseCard from "./Ui/CourseCard";
 import { motion } from "framer-motion";
 const BestSelling = () => {
-    const itemVariants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.95, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.95, ease: "easeOut" },
+    },
   };
 
   return (

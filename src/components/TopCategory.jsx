@@ -101,8 +101,8 @@ const TopCategory = () => {
       transition: { duration: 0.95, ease: "easeOut" },
     },
   };
-    const ref = useRef(null);
-   const isInView = useInView(ref, { once: false, threshold: 1 });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, threshold: 1 });
   return (
     <div className="w-full mt-12 mb-10 px-4">
       <h1 className="text-4xl text-center text-[#1D2026] font-[600]">

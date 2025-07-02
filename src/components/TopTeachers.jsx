@@ -95,18 +95,18 @@ const TopTeachers = () => {
           </motion.div>
         ))}
       </div>
-<div className="mt-5 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left px-4">
-  <h1 className="text-base md:text-lg font-medium max-w-xl">
-    Thousands of students are waiting for an instructor. Start teaching & earning now!
-  </h1>
-  <div>
-    <h1 className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0">
-      Start Teaching
-      <img src={arrow} alt="arrow" width={20} />
-    </h1>
-  </div>
-</div>
-
+      <div className="mt-5 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left px-4">
+        <h1 className="text-base md:text-lg font-medium max-w-xl">
+          Thousands of students are waiting for an instructor. Start teaching &
+          earning now!
+        </h1>
+        <div>
+          <h1 className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0">
+            Start Teaching
+            <img src={arrow} alt="arrow" width={20} />
+          </h1>
+        </div>
+      </div>
     </div>
   );
 };

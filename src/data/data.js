@@ -17,8 +17,8 @@ const SellingCourse = [
     rate: 5.0,
     studentNumber: "265.7K",
     img: course1,
-    bgcolor: '#FFF2E5',
-    textColor: '#'
+    bgcolor: "#FFF2E5",
+    textColor: "#",
   },
   {
     courseName: "Copywriting - Become a Freelance Copywriter, your ow...",
@@ -27,8 +27,8 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course2,
-    bgcolor: '#FFEEE8',
-    textColor: '#993D20'
+    bgcolor: "#FFEEE8",
+    textColor: "#993D20",
   },
   {
     courseName: "The Python Mega Course: Build 10 Real World Applications",
@@ -37,8 +37,8 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course3,
-    bgcolor: '#E1F7E3',
-    textColor: '#15711F'
+    bgcolor: "#E1F7E3",
+    textColor: "#15711F",
   },
   {
     courseName: "Beginner to Pro in Excel: Financial Modeling and Valuati...",
@@ -47,8 +47,8 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course4,
-    bgcolor: '#EBEBFF',
-    textColor: '#342F98'
+    bgcolor: "#EBEBFF",
+    textColor: "#342F98",
   },
   {
     courseName: "The Complete Foundation Stock Trading Course",
@@ -57,8 +57,8 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course5,
-    bgcolor: '#FFF2E5',
-    textColor: '#65390C'
+    bgcolor: "#FFF2E5",
+    textColor: "#65390C",
   },
   {
     courseName: "Reiki Level I, II and Master/Teacher Program",
@@ -67,8 +67,8 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course6,
-    bgcolor: '#FFF0F0',
-    textColor: '#882929'
+    bgcolor: "#FFF0F0",
+    textColor: "#882929",
   },
   {
     courseName: "The Complete Digital Marketing Course - 12 Courses in 1",
@@ -77,8 +77,8 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course7,
-    bgcolor: '#EBEBFF',
-    textColor: '#342F98'
+    bgcolor: "#EBEBFF",
+    textColor: "#342F98",
   },
   {
     courseName: "Learn Python Programming Masterclass",
@@ -87,25 +87,22 @@ const SellingCourse = [
     rate: "5.0",
     studentNumber: "265.7K",
     img: course8,
-    bgcolor: '#E1F7E3',
-    textColor: '#15711F'
+    bgcolor: "#E1F7E3",
+    textColor: "#15711F",
   },
-
 ];
 const FeatureCourses = [
   {
-
     courseName: "The Complete Digital Marketing Course - 12 Courses in 1",
     category: "Marketing",
     price: "57",
     rate: "5.0",
     studentNumber: "265.7K",
     img: course7,
-    bgcolor: '#EBEBFF',
-    textColor: '#342F98',
-    teachName: 'Kevin Gilbert'
+    bgcolor: "#EBEBFF",
+    textColor: "#342F98",
+    teachName: "Kevin Gilbert",
+  },
+];
 
-  }
-]
-
-export { SellingCourse , FeatureCourses};
+export { SellingCourse, FeatureCourses };
