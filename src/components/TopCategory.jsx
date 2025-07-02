@@ -16,7 +16,8 @@ import icon10 from "../assets/icons/icon10.png";
 import icon11 from "../assets/icons/icon11.png";
 import icon12 from "../assets/icons/icon12.png";
 import icon13 from "../assets/icons/icon13.png";
-
+import arrow from "../assets/icons/ArrowRight.png";
+import { Link } from "react-router-dom";
 const TopCategory = () => {
   const TopCategoryData = [
     {
@@ -128,6 +129,17 @@ const TopCategory = () => {
             />
           </motion.div>
         ))}
+      </div>
+      <div className="mt-7 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left px-4">
+        <h1 className="text-base md:text-lg font-medium max-w-xl">
+          We have more category & subcategory.
+        </h1>
+        <div>
+          <Link className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0">
+            Start Teaching
+            <img src={arrow} alt="arrow" width={20} />
+          </Link>
+        </div>
       </div>
     </div>
   );
