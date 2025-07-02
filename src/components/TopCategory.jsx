@@ -135,8 +135,11 @@ const TopCategory = () => {
           We have more category & subcategory.
         </h1>
         <div>
-          <Link className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0">
-            Start Teaching
+          <Link
+            className="font-bold text-[#FF6636] flex items-center gap-2 justify-center md:justify-start mt-2 md:mt-0"
+            to={"/category"}
+          >
+            Browse All
             <img src={arrow} alt="arrow" width={20} />
           </Link>
         </div>

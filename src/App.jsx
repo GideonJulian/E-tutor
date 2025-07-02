@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layouts/Layout";
 import { About, Home, Contact, Course, BecomeInstructor } from "./pages";
+import Category from "./pages/Category";
 
 const route = createBrowserRouter([
   {
@@ -25,6 +26,9 @@ const route = createBrowserRouter([
       {
         path: 'instructor',
         element: <BecomeInstructor />
+      },{
+        path: 'category',
+        element: <Category />
       }
 
     ]

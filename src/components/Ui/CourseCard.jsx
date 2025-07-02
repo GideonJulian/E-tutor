@@ -12,7 +12,7 @@ const CourseCard = ({
   textColor,
 }) => {
   return (
-    <div className="w-full max-w-[650px] overflow-hidden font-sans mt-3 rounded-md shadow-sm bg-white">
+    <div className="w-full max-w-[650px] overflow-hidden font-sans mt-3 rounded-md shadow-sm bg-white cursor-pointer transition-shadow hover:shadow-md">
       {/* Image */}
       <img
         src={img}

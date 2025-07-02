@@ -16,8 +16,8 @@ const Home = () => {
       <div>
         <TopCategory />
       </div>
-      <div className="bg-[#F0F2F5] w-full">
-        <BestSelling />
+      <div className="bg-[#F0F2F5] w-full pt-20">
+        <BestSelling title={"Best selling courses"} />
       </div>
       <div className="bg-[#fff] w-full p-6">
         <FeatureCourses />
