@@ -131,6 +131,32 @@ const Category = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mx-auto max-w-[1280px] mt-5 px-4">
+          {/* Suggestions */}
+          <div className="flex flex-wrap items-center gap-3 text-sm">
+            <h1 className="font-medium">Suggestion:</h1>
+            <li className="text-[#FF6636] list-none cursor-pointer">
+              user interface
+            </li>
+            <li className="text-[#FF6636] list-none cursor-pointer">
+              user experience
+            </li>
+            <li className="text-[#FF6636] list-none cursor-pointer">
+              web design
+            </li>
+            <li className="text-[#FF6636] list-none cursor-pointer">
+              interface
+            </li>
+            <li className="text-[#FF6636] list-none cursor-pointer">app</li>
+          </div>
+
+          <h1 className="text-sm md:text-base font-medium text-[#1D2026]">
+            3,145,684{" "}
+            <span className="text-[#4E5566] font-normal">
+              results found for “ui/ux design”
+            </span>
+          </h1>
+        </div>
       </div>
     </div>
   );
