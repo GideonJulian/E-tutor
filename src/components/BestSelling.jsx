@@ -3,7 +3,7 @@ import { SellingCourse } from "../data/data";
 import CourseCard from "./Ui/CourseCard";
 import { motion } from "framer-motion";
 
-const BestSelling = ({ title, limit }) => {
+const BestSelling = ({ title,  courses = SellingCourse, limit , searchTerm = "" }) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -12,12 +12,19 @@ const BestSelling = ({ title, limit }) => {
       transition: { duration: 0.95, ease: "easeOut" },
     },
   };
+  
+  const filteredCourses = courses
+    .filter((item) =>
+      item.courseName.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .slice(0, limit);
+
 
   return (
     <div className="pb-10">
       <h1 className="text-2xl text-center font-[600]">{title}</h1>
       <div className="md:max-w-[1290px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 md:mx-auto px-4">
-        {SellingCourse.slice(0, limit).map((item, index) => (
+        {filteredCourses.slice(0, limit).map((item, index) => (
           <motion.div
             key={index}
             initial="hidden"

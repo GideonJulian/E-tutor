@@ -17,6 +17,8 @@ const Category = () => {
   const [selectedSort, setSelectedSort] = useState("Trending");
 
   const sortOptions = ["Trending", "Top Rated", "Newest", "Price: Low to High"];
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div className="w-full mt-10">
       <div className="w-full px-4">
@@ -70,7 +72,9 @@ const Category = () => {
                 </svg>
               </div>
               <input
-                type="text"
+              type="text"
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
                 className="border border-[#E9EAF0] w-full max-w-[457px] placeholder:text-[#1D2026] px-3 py-2 pl-10 rounded-md focus:outline-none focus:ring-1 focus:ring-[#FF6636]"
                 placeholder="UI/UX Design"
               />
@@ -156,6 +160,10 @@ const Category = () => {
               results found for “ui/ux design”
             </span>
           </h1>
+        </div>
+        <div className="m-10">
+         <BestSelling  searchTerm={searchTerm} />
+
         </div>
       </div>
     </div>
