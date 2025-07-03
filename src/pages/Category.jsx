@@ -72,9 +72,9 @@ const Category = () => {
                 </svg>
               </div>
               <input
-              type="text"
-  value={searchTerm}
-  onChange={(e) => setSearchTerm(e.target.value)}
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="border border-[#E9EAF0] w-full max-w-[457px] placeholder:text-[#1D2026] px-3 py-2 pl-10 rounded-md focus:outline-none focus:ring-1 focus:ring-[#FF6636]"
                 placeholder="UI/UX Design"
               />
@@ -161,10 +161,8 @@ const Category = () => {
             </span>
           </h1>
         </div>
-        <div className="m-10">
-         <BestSelling  searchTerm={searchTerm} />
 
-        </div>
+        <BestSelling searchTerm={searchTerm} />
       </div>
     </div>
   );
