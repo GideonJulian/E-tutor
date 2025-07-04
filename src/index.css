@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+
+@media (max-width: 768px) {
+  .gallery img {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+}

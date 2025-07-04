@@ -1,9 +1,9 @@
 import React from "react";
 import become from "../assets/images/become.png";
-import num1 from "../assets/images/1.png";
-import num2 from "../assets/images/2.png";
-import num3 from "../assets/images/3.png";
-import num4 from "../assets/images/4.png";
+import num1 from "../assets/images/num1.png";
+import num2 from "../assets/images/num2.png";
+import num3 from "../assets/images/num3.png";
+import num4 from "../assets/images/num4.png";
 import arrow from "../assets/icons/ArrowRight.png";
 
 const BecomeHost = () => {
