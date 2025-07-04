@@ -227,27 +227,44 @@ const About = () => {
         </div>
       </div>
 
-      <div className="max-w-[1100px] mx-auto flex">
-        {[
-          {
-            text: "Eduguard fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes them available to customers.",
-            name: "Sundar Pichai",
-            role: `Chief Chairman of ${(
-              <Link>
-                <a href="">Google</a>
-              </Link>
-            )}`,
-          },
-        ].map((items) => (
-          <div className="p-4 bg-[#F5F7FA]">
-            <div>
-              <img src="" alt="" />
-            </div>
-            <p></p>
-            <div></div>
+     <div className="max-w-[1100px] mx-auto mt-16 mb-10 px-4">
+  <div className="flex flex-col lg:flex-row gap-6 lg:gap-5">
+    {[
+      {
+        text: "Eduguard fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes them available to customers.",
+        name: "Sundar Pichai",
+        role: "Chief Chairman of Google",
+      },
+      {
+        text: "Edugaurd responds to the needs of the business in an agile and global manner. It’s truly the best solution for our employees and their careers.",
+        name: "Satya Nadella",
+        role: "CEO of Microsoft",
+      },
+      {
+        text: "In total, it was a big success, I would get emails about what a fantastic resource it was.",
+        name: "Ted Sarandos",
+        role: "Chief Executive Officer of Netflix",
+      },
+    ].map((items, idx) => (
+      <div key={idx} className="flex flex-col flex-1">
+        <div className="p-4 bg-[#F5F7FA] rounded-lg  shadow-md">
+          <div>
+            <img src={quote2} alt="" className="w-8 sm:w-10" />
           </div>
-        ))}
+          <p className="text-center p-4 text-sm sm:text-base">{items.text}</p>
+          <div className="flex items-center justify-end">
+            <img src={quote1} alt="" className="w-8 sm:w-10" />
+          </div>
+        </div>
+        <div className="text-center mt-4">
+          <h1 className="font-semibold text-lg">{items.name}</h1>
+          <p className="text-[#6E7485] text-sm">{items.role}</p>
+        </div>
       </div>
+    ))}
+  </div>
+</div>
+
     </div>
   );
 };
