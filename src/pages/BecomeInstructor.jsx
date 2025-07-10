@@ -13,6 +13,9 @@ const BecomeInstructor = () => {
         heroImg={heroImg}
        imgSize={"300"} 
       />
+      <div className="bg-[#FFEEE8] w-full p-3 ">
+
+      </div>
     </div>
   );
 };
