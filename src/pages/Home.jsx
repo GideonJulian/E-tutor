@@ -6,12 +6,20 @@ import OverlayCard from "../components/Ui/OverlayCard";
 import FeatureCourses from "../components/FeatureCourses";
 import BecomeHost from "../components/BecomeHost";
 import TopTeachers from "../components/TopTeachers";
-
+import heroImg from "../assets/images/Homehero.png";
 const Home = () => {
   return (
     <div>
       <div>
-        <Hero />
+        <Hero
+          heroImg={heroImg}
+          heroHead={" Learn with expert anytime anywhere"}
+          buttonText={"Create An Account"}
+          subText={
+            " Our mission is to help people find the best course online and learn with experts anytime, anywhere."
+          }
+          bg={'[#F0F2F5]'}
+        />
       </div>
       <div>
         <TopCategory />
