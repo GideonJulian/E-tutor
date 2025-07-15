@@ -99,61 +99,66 @@ const BecomeInstructor = () => {
       </div>
       {/*  */}
       <div>
-        <div className="container mx-auto my-10 flex flex-col md:flex-row items-center justify-center gap-10 px-4">
-          {/* Image Section */}
+      <div className="container mx-auto my-10 flex flex-col lg:flex-row items-center justify-center gap-12 px-4">
+  {/* Image Section */}
+  <img
+    src={computer}
+    alt=""
+    className="w-full max-w-md md:max-w-lg object-contain"
+  />
+
+  {/* Text Section */}
+  <div className="flex flex-col gap-6 text-center md:text-left">
+    <div>
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1D2026] max-w-2xl">
+        Why you’ll start teaching on Eduguard
+      </h1>
+      <p className="text-[#4E5566] mt-4 max-w-2xl text-sm sm:text-base">
+        Praesent congue ornare nibh sed ullamcorper. Proin venenatis
+        tellus non turpis scelerisque, vitae auctor arcu ornare. Cras
+        vitae nulla a purus mollis venenatis.
+      </p>
+    </div>
+
+    {/* Feature List */}
+    <div className="flex flex-col gap-6">
+      {[
+        {
+          head: "Teach your students as you want.",
+          icon: CheckCircle,
+          text: "Morbi quis lorem non orci fermentum euismod. Nam sapien tellus, aliquam nec porttitor vel, pellentesque at metus.",
+        },
+        {
+          head: "Manage your course, payment in one place",
+          icon: CheckCircle,
+          text: "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu. Nullam vel libero pharetra, euismod turpis et, elementum enim.",
+        },
+        {
+          head: "Chat with your students",
+          icon: CheckCircle,
+          text: "Morbi quis lorem non orci fermentum euismod. Nam sapien tellus, aliquam nec porttitor vel, pellentesque at metus.",
+        },
+      ].map((item, idx) => (
+        <div key={idx} className="flex gap-3">
           <img
-            src={computer}
+            src={item.icon}
             alt=""
-            className="w-full max-w-[500px] object-contain"
+            className="w-4 h-4 sm:w-5 sm:h-5 mt-1"
           />
-
-          {/* Text Section */}
-          <div className="flex flex-col gap-6 text-center md:text-left">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#1D2026] max-w-xl">
-                Why you’ll start teaching on Eduguard
-              </h1>
-              <p className="text-[#4E5566] mt-4 max-w-xl">
-                Praesent congue ornare nibh sed ullamcorper. Proin venenatis
-                tellus non turpis scelerisque, vitae auctor arcu ornare. Cras
-                vitae nulla a purus mollis venenatis.
-              </p>
-            </div>
-
-            {/* Feature List */}
-            <div className="flex flex-col gap-6">
-              {[
-                {
-                  head: "Teach your students as you want.",
-                  icon: CheckCircle,
-                  text: "Morbi quis lorem non orci fermentum euismod. Nam sapien tellus, aliquam nec porttitor vel, pellentesque at metus.",
-                },
-                {
-                  head: "Manage your course, payment in one place",
-                  icon: CheckCircle,
-                  text: "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu. Nullam vel libero pharetra, euismod turpis et, elementum enim.",
-                },
-                {
-                  head: "Chat with your students",
-                  icon: CheckCircle,
-                  text: "Morbi quis lorem non orci fermentum euismod. Nam sapien tellus, aliquam nec porttitor vel, pellentesque at metus.",
-                },
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-3">
-                  <img src={item.icon} alt="" className="w-10 h-10 mt-1" />
-                  <div>
-                    <h2 className="font-semibold text-base md:text-lg">
-                      {item.head}
-                    </h2>
-                    <p className="text-[#4E5566] max-w-lg text-sm md:text-base">
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div>
+            <h2 className="font-semibold text-base sm:text-lg">
+              {item.head}
+            </h2>
+            <p className="text-[#4E5566] max-w-xl text-xs sm:text-sm">
+              {item.text}
+            </p>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );
