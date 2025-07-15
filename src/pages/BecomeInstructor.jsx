@@ -10,6 +10,8 @@ import global from "../assets/icons/global.png";
 import check from "../assets/icons/check.png";
 import stack from "../assets/icons/Stack.png";
 import CountUp from "react-countup";
+import computer from '../assets/images/heroWhy.png'
+import CheckCircle from '../assets/icons/CheckCircle.png'
 const BecomeInstructor = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -97,8 +99,8 @@ const BecomeInstructor = () => {
       </div>
       {/*  */}
       <div>
-          <div className="flex md:ml-[130px] flex-col md:flex-row items-center justify-center gap-6 px-4 pt-4 pb-0 md:p-0">
-            
+          <div className="flex md:ml-[130px] mt-10 flex-col md:flex-row items-center justify-center gap-6 px-4 pt-4 pb-0 md:p-0">
+              <img src={computer} alt="" className="w-[498px]"/>
           </div>
       </div>
     </div>
