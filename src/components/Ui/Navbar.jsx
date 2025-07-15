@@ -107,16 +107,16 @@ const Navbar = () => {
       </div>
 
       {/* Sidebar Overlay */}
-   {sidebarOpen && (
-  <div
-    className="fixed inset-0 backdrop-blur-md bg-white/30 z-40"
-    onClick={() => setSidebarOpen(false)}
-  ></div>
-)}
-
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 backdrop-blur-md bg-white/30 z-40"
+          onClick={() => setSidebarOpen(false)}
+        ></div>
+      )}
 
       {/* Sidebar Menu */}
-    <div
+     {/* Sidebar Menu */}
+<div
   className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
     sidebarOpen ? "translate-x-0" : "-translate-x-full"
   } flex flex-col`}
@@ -128,15 +128,25 @@ const Navbar = () => {
       className="text-2xl text-[#FF6636]"
       onClick={() => setSidebarOpen(false)}
     >
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-</svg>
-
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        className="w-6 h-6"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
     </button>
   </div>
-
+<div className="flex justify-around p-4 ">
+    <img src={Bell} alt="Notifications" className="w-6 h-6" />
+    <img src={Heart} alt="Wishlist" className="w-6 h-6" />
+    <img src={cart} alt="Cart" className="w-6 h-6" />
+  </div>
   {/* Navigation Links */}
-  <ul className="flex flex-col p-4 gap-4 flex-grow">
+  <ul className="flex flex-col p-4 gap-4">
     {tabs.map((tab) => (
       <li key={tab.name}>
         <Link
@@ -149,6 +159,9 @@ const Navbar = () => {
       </li>
     ))}
   </ul>
+
+
+  
 
   {/* Buttons at Bottom */}
   <div className="p-4 mt-auto">
