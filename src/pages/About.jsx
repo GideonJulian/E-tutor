@@ -23,7 +23,10 @@ import quote1 from "../assets/icons/quote1.png";
 import quote2 from "../assets/icons/quote2.png";
 
 const About = () => {
-  const [ref, inView] = useInView({ triggerOnce: true });
+   const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.3,    
+  });
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -133,34 +136,37 @@ const About = () => {
             { icon: stack, num: 51, text: "", name: "Trusted Companies" },
           ].map((item, idx) => (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="flex flex-col items-center text-center"
-            >
-              <div className="flex items-center gap-3">
-                <img
-                  src={item.icon}
-                  alt={item.name}
-                  className="w-8 h-8 sm:w-8 sm:h-8"
-                />
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1D2026]">
-                  {inView && (
-                    <CountUp
-                      end={item.num}
-                      duration={2}
-                      decimals={item.text === "%" ? 1 : 0}
-                    />
-                  )}
-                  {item.text}
-                </h1>
-              </div>
-              <p className="text-sm sm:text-base text-[#6E7485] mt-2">
-                {item.name}
-              </p>
-            </motion.div>
+      ref={ref}
+      key={idx}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: idx * 0.2 }}
+      className="flex flex-col items-center text-center"
+    >
+      <div className="flex items-center gap-3">
+        <img
+          src={item.icon}
+          alt={item.name}
+          className="w-8 h-8 sm:w-8 sm:h-8"
+        />
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1D2026]">
+          {inView ? (
+            <CountUp
+              end={item.num}
+              duration={2}
+              decimals={item.text === "%" ? 1 : 0}
+            />
+          ) : (
+            0 // show 0 before animation
+          )}
+          {item.text}
+        </h1>
+      </div>
+      <p className="text-sm sm:text-base text-[#6E7485] mt-2">
+        {item.name}
+      </p>
+    </motion.div>
           ))}
         </div>
       </div>
