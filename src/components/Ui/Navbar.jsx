@@ -140,11 +140,11 @@ const Navbar = () => {
       </svg>
     </button>
   </div>
-<div className="flex justify-around p-4 ">
+{/* <div className="flex justify-around p-4 ">
     <img src={Bell} alt="Notifications" className="w-6 h-6" />
     <img src={Heart} alt="Wishlist" className="w-6 h-6" />
     <img src={cart} alt="Cart" className="w-6 h-6" />
-  </div>
+  </div> */}
   {/* Navigation Links */}
   <ul className="flex flex-col p-4 gap-4">
     {tabs.map((tab) => (
