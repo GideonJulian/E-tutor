@@ -12,6 +12,10 @@ import stack from "../assets/icons/Stack.png";
 import CountUp from "react-countup";
 import computer from "../assets/images/herowhy.png";
 import CheckCircle from "../assets/icons/CheckCircle.png";
+import icon1 from "../assets/icons/icon17.png";
+import icon2 from "../assets/icons/icon16.png";
+import icon4 from "../assets/icons/icon14.png";
+import icon3 from "../assets/icons/icon15.png";
 const BecomeInstructor = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -159,7 +163,48 @@ const BecomeInstructor = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F5F7FA] p-4"></div>
+      <div className="w-full bg-[#F5F7FA] p-8">
+  <h1 className="text-center font-bold text-2xl mx-auto max-w-[318px] w-full">
+    How you'll become successful instructor
+  </h1>
+
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      {
+        icon: icon1,
+        head: "1. Apply to become instructor.",
+        text: "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.",
+      },
+      {
+        icon: icon2,
+        head: "2. Setup & edit your profile.",
+        text: "Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget accumsan ullamcorper.",
+      },
+      {
+        icon: icon3,
+        head: "3. Create your new course",
+        text: "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.",
+      },
+      {
+        icon: icon4,
+        head: "4. Start teaching & earning",
+        text: "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.",
+      },
+    ].map((items, idx) => (
+      <div
+        key={idx}
+        className="bg-white flex flex-col items-center justify-center text-center rounded-lg p-7 shadow hover:shadow-md transition-all duration-300"
+      >
+        <div className="mb-4">
+          <img src={items.icon} alt="" className="w-12 h-12" />
+        </div>
+        <h2 className="font-semibold text-lg mb-2">{items.head}</h2>
+        <p className="text-[#6E7485] text-md">{items.text}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
     </div>
   );
 };
