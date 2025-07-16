@@ -4,12 +4,12 @@ import num1 from "../assets/images/num1.png";
 import num2 from "../assets/images/num2.png";
 import num3 from "../assets/images/num3.png";
 import num4 from "../assets/images/num4.png";
-
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import arrow from "../assets/icons/ArrowRight.png";
 
 const BecomeHost = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center gap-10 px-4 py-8">
       {/* 👉 Mobile Gradient Card */}
@@ -24,8 +24,11 @@ const BecomeHost = () => {
           Instructors from around the world teach millions of students on Udemy.
           We provide the tools and skills to teach what you love.
         </p>
-        <button className="mt-4 bg-white cursor-pointer text-[#FF6636] px-4 py-2 font-bold rounded flex items-center gap-2" onClick={()=> navigate('/instructor')}>
-          Start Teaching
+        <button
+          className="mt-4 bg-white cursor-pointer text-[#FF6636] px-4 py-2 font-bold rounded flex items-center gap-2 z-10"
+          onClick={() => navigate("/instructor")}
+        >
+          <Link to="/instructor">Start Teaching</Link>
           <img src={arrow} alt="arrow" width={20} />
         </button>
       </div>
