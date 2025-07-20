@@ -17,7 +17,9 @@ import icon2 from "../assets/icons/icon16.png";
 import icon4 from "../assets/icons/icon14.png";
 import icon3 from "../assets/icons/icon15.png";
 import Union from "../assets/images/Union.png";
-import union2 from '../assets/images/union2.png'
+import union2 from "../assets/images/union2.png";
+import arrow from "../assets/icons/ArrowRight.png";
+import email from '../assets/icons/email.png'
 const BecomeInstructor = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -250,11 +252,56 @@ const BecomeInstructor = () => {
         </div>
       </div>
       <div className="p-6 md:p-10 lg:p-14 w-full bg-[#FFEEE8]">
-          <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
+        <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
           <div>
-            <img src={union2} alt="" />
+            <img src={union2} alt="" className="w-full max-w-[548px]" />
           </div>
+          <div>
+            <h1 className="text-4xl w-[536px] font-bold">
+              Don’t worry we’re always here to help you
+            </h1>
+            <p className="w-[536px] mt-3">
+              Mauris aliquet ornare tortor, ut mollis arcu luctus quis.
+              Phasellus nec augue malesuada, sagittis ligula vel, faucibus
+              metus. Nam viverra metus eget nunc dignissim.
+            </p>
+
+            <ul className="pt-4 space-y-2 text-left text-[#4E5566] flex flex-col ">
+              {[
+                {
+                  text: "Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.",
+                },
+                {
+                  text: "Those who are looking to reboot their work life and try a new profession that.",
+                },
+                {
+                  text: "Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.",
+                },
+                {
+                  text: "Duis ornare enim ullamcorper congue.",
+                },
+              ].map((item, idx) => (
+                <div className="flex items-center">
+                  <img src={arrow} />
+                  <li key={idx} className="list-none ml-5">
+                    {item.text}
+                  </li>
+                </div>
+              ))}
+            </ul>
+            <div className="mt-4">
+              <div className="flex items-center gap-5 ">
+                <img src={email} alt="" />
+                <div>
+                  <p className="text-[#8C94A3] text-lg">Email us, anytime anywhere</p>
+                  <h1 className="font-bold ">
+                    help.eduguard@gamil.com
+                  </h1>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   );
