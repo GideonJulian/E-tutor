@@ -251,58 +251,58 @@ const BecomeInstructor = () => {
           </div>
         </div>
       </div>
-      <div className="p-6 md:p-10 lg:p-14 w-full bg-[#FFEEE8]">
-        <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
-          <div>
-            <img src={union2} alt="" className="w-full max-w-[548px]" />
-          </div>
-          <div>
-            <h1 className="text-4xl w-[536px] font-bold">
-              Don’t worry we’re always here to help you
-            </h1>
-            <p className="w-[536px] mt-3">
-              Mauris aliquet ornare tortor, ut mollis arcu luctus quis.
-              Phasellus nec augue malesuada, sagittis ligula vel, faucibus
-              metus. Nam viverra metus eget nunc dignissim.
-            </p>
+    <div className="p-6 md:p-10 lg:p-14 w-full bg-[#FFEEE8]">
+  <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-24">
+    {/* Image Section */}
+    <div className="flex-shrink-0 w-full md:w-1/2">
+      <img src={union2} alt="" className="w-full max-w-full" />
+    </div>
 
-            <ul className="pt-4 space-y-2 text-left text-[#4E5566] flex flex-col ">
-              {[
-                {
-                  text: "Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.",
-                },
-                {
-                  text: "Those who are looking to reboot their work life and try a new profession that.",
-                },
-                {
-                  text: "Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.",
-                },
-                {
-                  text: "Duis ornare enim ullamcorper congue.",
-                },
-              ].map((item, idx) => (
-                <div className="flex items-center">
-                  <img src={arrow} />
-                  <li key={idx} className="list-none ml-5">
-                    {item.text}
-                  </li>
-                </div>
-              ))}
-            </ul>
-            <div className="mt-4">
-              <div className="flex items-center gap-5 ">
-                <img src={email} alt="" />
-                <div>
-                  <p className="text-[#8C94A3] text-lg">
-                    Email us, anytime anywhere
-                  </p>
-                  <h1 className="font-bold ">help.eduguard@gamil.com</h1>
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* Text Content Section */}
+    <div className="w-full md:w-1/2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        Don’t worry we’re always here to help you
+      </h1>
+      <p className="mt-3 text-base sm:text-lg text-[#4E5566]">
+        Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus nec augue malesuada, sagittis ligula vel, faucibus
+        metus. Nam viverra metus eget nunc dignissim.
+      </p>
+
+      <ul className="pt-4 space-y-2 text-[#4E5566]">
+        {[
+          {
+            text: "Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.",
+          },
+          {
+            text: "Those who are looking to reboot their work life and try a new profession that.",
+          },
+          {
+            text: "Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.",
+          },
+          {
+            text: "Duis ornare enim ullamcorper congue.",
+          },
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-start gap-3">
+            <img src={arrow} alt="arrow" className="w-4 h-4 mt-1" />
+            <span>{item.text}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-6 flex items-start gap-4">
+        <img src={email} alt="email" className="w-6 h-6 mt-1" />
+        <div>
+          <p className="text-[#8C94A3] text-sm sm:text-base">
+            Email us, anytime anywhere
+          </p>
+          <h1 className="font-bold text-base sm:text-lg">help.eduguard@gmail.com</h1>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };
