@@ -17,6 +17,7 @@ import icon2 from "../assets/icons/icon16.png";
 import icon4 from "../assets/icons/icon14.png";
 import icon3 from "../assets/icons/icon15.png";
 import Union from "../assets/images/Union.png";
+import union2 from '../assets/images/union2.png'
 const BecomeInstructor = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -205,44 +206,56 @@ const BecomeInstructor = () => {
           ))}
         </div>
       </div>
-    <div className="p-6 md:p-10 lg:p-14 w-full">
-  <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
-    {/* Left Text Content */}
-    <div className="text-center md:text-left flex-1 max-w-[536px]">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#1D2026] font-bold">
-        Instructor rules & regulations
-      </h1>
-      <p className="pt-4  md:text-lg text-sm text-[#4E5566]">
-        Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem.
-      </p>
+      <div className="p-6 md:p-10 lg:p-14 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
+          {/* Left Text Content */}
+          <div className="text-center md:text-left flex-1 max-w-[536px]">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#1D2026] font-bold">
+              Instructor rules & regulations
+            </h1>
+            <p className="pt-4  md:text-lg text-sm text-[#4E5566]">
+              Sed auctor, nisl non elementum ornare, turpis orci consequat arcu,
+              at iaculis quam leo nec libero. Aenean mollis turpis velit, id
+              laoreet sem luctus in. Etiam et egestas lorem.
+            </p>
 
-      <ul className="pt-4 space-y-2 text-left text-[#4E5566]">
-        {[
-          { text: "Sed ullamcorper libero quis condimentum pellentesque." },
-          { text: "Nam leo tortor, tempus et felis non." },
-          { text: "Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros." },
-          { text: "Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi." },
-        ].map((item, idx) => (
-          <li key={idx} className="list-disc ml-5">
-            {item.text}
-          </li>
-        ))}
-      </ul>
-    </div>
+            <ul className="pt-4 space-y-2 text-left text-[#4E5566]">
+              {[
+                {
+                  text: "Sed ullamcorper libero quis condimentum pellentesque.",
+                },
+                { text: "Nam leo tortor, tempus et felis non." },
+                {
+                  text: "Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.",
+                },
+                {
+                  text: "Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.",
+                },
+              ].map((item, idx) => (
+                <li key={idx} className="list-disc ml-5">
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-    {/* Right Image */}
-    <div className="flex-1 flex justify-center md:justify-end">
-      <img
-        src={Union}
-        alt="Illustration"
-        className="w-full max-w-[548px]"
-      />
-    </div>
-  </div>
-</div>
-
-
-
+          {/* Right Image */}
+          <div className="flex-1 flex justify-center md:justify-end">
+            <img
+              src={Union}
+              alt="Illustration"
+              className="w-full max-w-[548px]"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="p-6 md:p-10 lg:p-14 w-full bg-[#FFEEE8]">
+          <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
+          <div>
+            <img src={union2} alt="" />
+          </div>
+          </div>
+      </div>
     </div>
   );
 };
