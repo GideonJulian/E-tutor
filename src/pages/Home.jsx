@@ -18,7 +18,7 @@ const Home = () => {
           subText={
             " Our mission is to help people find the best course online and learn with experts anytime, anywhere."
           }
-          bg={'[#F0F2F5]'}
+          bg={"[#F0F2F5]"}
         />
       </div>
       <div>

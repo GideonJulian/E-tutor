@@ -19,7 +19,7 @@ import icon3 from "../assets/icons/icon15.png";
 import Union from "../assets/images/Union.png";
 import union2 from "../assets/images/union2.png";
 import arrow from "../assets/icons/ArrowRight.png";
-import email from '../assets/icons/email.png'
+import email from "../assets/icons/email.png";
 const BecomeInstructor = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -293,10 +293,10 @@ const BecomeInstructor = () => {
               <div className="flex items-center gap-5 ">
                 <img src={email} alt="" />
                 <div>
-                  <p className="text-[#8C94A3] text-lg">Email us, anytime anywhere</p>
-                  <h1 className="font-bold ">
-                    help.eduguard@gamil.com
-                  </h1>
+                  <p className="text-[#8C94A3] text-lg">
+                    Email us, anytime anywhere
+                  </p>
+                  <h1 className="font-bold ">help.eduguard@gamil.com</h1>
                 </div>
               </div>
             </div>
