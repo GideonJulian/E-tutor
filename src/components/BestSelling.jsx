@@ -3,7 +3,12 @@ import { SellingCourse } from "../data/data";
 import CourseCard from "./Ui/CourseCard";
 import { motion } from "framer-motion";
 
-const BestSelling = ({ title,  courses = SellingCourse, limit , searchTerm = "" }) => {
+const BestSelling = ({
+  title,
+  courses = SellingCourse,
+  limit,
+  searchTerm = "",
+}) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -12,13 +17,12 @@ const BestSelling = ({ title,  courses = SellingCourse, limit , searchTerm = "" 
       transition: { duration: 0.95, ease: "easeOut" },
     },
   };
-  
+
   const filteredCourses = courses
     .filter((item) =>
       item.courseName.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .slice(0, limit);
-
 
   return (
     <div className="pb-10">
