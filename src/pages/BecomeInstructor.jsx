@@ -16,6 +16,7 @@ import icon1 from "../assets/icons/icon17.png";
 import icon2 from "../assets/icons/icon16.png";
 import icon4 from "../assets/icons/icon14.png";
 import icon3 from "../assets/icons/icon15.png";
+import Union from "../assets/images/Union.png";
 const BecomeInstructor = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -164,46 +165,83 @@ const BecomeInstructor = () => {
         </div>
       </div>
       <div className="w-full bg-[#F5F7FA] p-8">
-  <h1 className="text-center font-bold text-2xl mx-auto max-w-[318px] w-full">
-    How you'll become successful instructor
-  </h1>
+        <h1 className="text-center font-bold text-2xl mx-auto max-w-[318px] w-full">
+          How you'll become successful instructor
+        </h1>
 
-  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    {[
-      {
-        icon: icon1,
-        head: "1. Apply to become instructor.",
-        text: "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.",
-      },
-      {
-        icon: icon2,
-        head: "2. Setup & edit your profile.",
-        text: "Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget accumsan ullamcorper.",
-      },
-      {
-        icon: icon3,
-        head: "3. Create your new course",
-        text: "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.",
-      },
-      {
-        icon: icon4,
-        head: "4. Start teaching & earning",
-        text: "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.",
-      },
-    ].map((items, idx) => (
-      <div
-        key={idx}
-        className="bg-white flex flex-col items-center justify-center text-center rounded-lg p-7 shadow hover:shadow-md transition-all duration-300"
-      >
-        <div className="mb-4">
-          <img src={items.icon} alt="" className="w-12 h-12" />
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              icon: icon1,
+              head: "1. Apply to become instructor.",
+              text: "Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.",
+            },
+            {
+              icon: icon2,
+              head: "2. Setup & edit your profile.",
+              text: "Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget accumsan ullamcorper.",
+            },
+            {
+              icon: icon3,
+              head: "3. Create your new course",
+              text: "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.",
+            },
+            {
+              icon: icon4,
+              head: "4. Start teaching & earning",
+              text: "Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque.",
+            },
+          ].map((items, idx) => (
+            <div
+              key={idx}
+              className="bg-white flex flex-col items-center justify-center text-center rounded-lg p-7 shadow hover:shadow-md transition-all duration-300"
+            >
+              <div className="mb-4">
+                <img src={items.icon} alt="" className="w-12 h-12" />
+              </div>
+              <h2 className="font-semibold text-lg mb-2">{items.head}</h2>
+              <p className="text-[#6E7485] text-md">{items.text}</p>
+            </div>
+          ))}
         </div>
-        <h2 className="font-semibold text-lg mb-2">{items.head}</h2>
-        <p className="text-[#6E7485] text-md">{items.text}</p>
       </div>
-    ))}
+    <div className="p-6 md:p-10 lg:p-14 w-full">
+  <div className="flex flex-col md:flex-row items-center justify-center  gap-10 lg:gap-24">
+    {/* Left Text Content */}
+    <div className="text-center md:text-left flex-1 max-w-[536px]">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#1D2026] font-bold">
+        Instructor rules & regulations
+      </h1>
+      <p className="pt-4  md:text-lg text-sm text-[#4E5566]">
+        Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem.
+      </p>
+
+      <ul className="pt-4 space-y-2 text-left text-[#4E5566]">
+        {[
+          { text: "Sed ullamcorper libero quis condimentum pellentesque." },
+          { text: "Nam leo tortor, tempus et felis non." },
+          { text: "Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros." },
+          { text: "Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi." },
+        ].map((item, idx) => (
+          <li key={idx} className="list-disc ml-5">
+            {item.text}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Right Image */}
+    <div className="flex-1 flex justify-center md:justify-end">
+      <img
+        src={Union}
+        alt="Illustration"
+        className="w-full max-w-[548px]"
+      />
+    </div>
   </div>
 </div>
+
+
 
     </div>
   );
